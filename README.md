@@ -30,7 +30,7 @@
 * In this file, create a simple HTML document
 * `<html>`
 *  `<body>`
-*    `<h1>Success!  The adnan.com virtual host is working!</h1>`
+*    `<h1>Success The adnan.com virtual host is working!</h1>`
 *  `</body>`
 * `</html>`
 * save and close the file with `:wq!`

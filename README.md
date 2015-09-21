@@ -35,8 +35,8 @@
   </body>
  </html>
  ```
- save and close the file with `:wq!`
- copy the content of index.html to your second site's index file
+* save and close the file with `:wq!`
+* copy the content of index.html to your second site's index file
 * `cp /var/www/adnan.com/public_html/index.html /var/www/dbadnan.com/public_html/index.html`
  open this file and modify it according to need
 * `vi /var/www/dbadnan.com/public_html/index.html`

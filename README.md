@@ -2,13 +2,13 @@
 
 ### install apache
 
-* first install apache on your server by using following commands
+ first install apache on your server by using following commands
 * `sudo apt-get update`
 * `sudo apt-get install apache2`
 
 ### Create Directory Structure
 
-*  we're going to make our directories like this:
+  we're going to make our directories like this:
 
 * `sudo mkdir -p /var/www/adnan.com/public_html`
 * `sudo mkdir -p /var/www/dbadnan.com/public_html`

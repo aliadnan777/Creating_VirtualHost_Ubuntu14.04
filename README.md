@@ -28,6 +28,7 @@
  We're just going to make an index.html page for each site
 * `vi /var/www/adnan.com/public_html/index.html`
 * In this file, create a simple HTML document
+
  ```
  <html>
   <body>
@@ -65,7 +66,7 @@
 * `sudo service apache2 restart`
 * you have to stop enginex or apche before running youe desired server
 
-### Set Up Local Hosts File
+### Edit Local Hosts File
 
 * open local host file
 * `sudo vi /etc/hosts/`

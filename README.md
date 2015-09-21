@@ -1,26 +1,27 @@
 # Creating_VirtualHost_Ubuntu14.04
 
-### install apache
+#### install apache
 
  first install apache on your server by using following commands
+ 
 * `sudo apt-get update`
 * `sudo apt-get install apache2`
 
-### Create Directory Structure
+#### Create Directory Structure
 
   we're going to make our directories for sites like this:
 
 * `sudo mkdir -p /var/www/adnan.com/public_html`
 * `sudo mkdir -p /var/www/dbadnan.com/public_html`
-* adnan.com and dbadnan.com are domain names that we are wanting to serve 
+*  adnan.com and dbadnan.com are domain names that we are wanting to serve 
 
 
-### Grant Permissions
+#### Grant Permissions
 
 * Now we have the directory structure for our files, but they are owned by our root user. If we want our regular user to be able to modify files in our web directories, we can change the ownership by doing this
 * `sudo chown -R $USER:$USER /var/www/adnan.com/public_html`
 * `sudo chown -R $USER:$USER /var/www/dbadnan.com/public_html`
- We should also modify our permissions  to ensure that read access is permitted to the general web directory and all of the files and folders it contains so that pages can be served correctly
+We should also modify our permissions  to ensure that read access is permitted to the general web directory and all of the files and folders it contains so that pages can be served correctly
 * `sudo chmod -R 755 /var/www`
 
 ### Create Demo Pages for Each Virtual Host
@@ -45,8 +46,8 @@
 
 ### Create New Virtual Host Files
 
-* Apache comes with a default virtual host file called 000-default.conf. We are going to copy it over to create a virtual host file for each of our domains
-* Start by copying the file for the first domain
+Apache comes with a default virtual host file called 000-default.conf. We are going to copy it over to create a virtual host file for each of our domains
+* Start by copying the file for the first domain vhost
 * `sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/adnan.com.conf`
 * now open the file `adnan.com.conf` in vi and change the following things
 * First, we need to change the ServerAdmin directive to an email that the site administrator can receive emails through
@@ -58,18 +59,18 @@
 * save and close the file
 * same changes required in other virtual host files
 
-### Enable the New Virtual Host Files
+#### Enable the New Virtual Host Files
 
 * `sudo a2ensite adnan.com.conf`
 * `sudo a2ensite dbadnan.com.conf`
 * now restart your apache server
 * `sudo service apache2 restart`
-* you have to stop enginex or apche before running youe desired server
+* you have to stop nginx or apache before running your desired server
 
-### Edit Local Hosts File
+#### Edit Local Hosts File
 
 * open local host file
-* `sudo vi /etc/hosts/`
+* `sudo vi /etc/hosts`
 * now enter the IP address and domain name of newly made virtual host
 * save and close the file
 
